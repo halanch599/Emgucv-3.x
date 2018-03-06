@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Try Catch AJ</Title>
+      <Author>Akhtar Jamil</Author>
+      <Description>Try Catch Block</Description>
+      <Shortcut>ofd</Shortcut>
+    <SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+		</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="csharp">
+    <![CDATA[try
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    $end$
+                }
+                else
+                {
+                    throw new Exception("No file selected.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+	]]>
+			</Code>
+		</Snippet>
+  </CodeSnippet>
+</CodeSnippets>
